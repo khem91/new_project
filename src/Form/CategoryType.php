@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+
 class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -16,7 +17,8 @@ class CategoryType extends AbstractType
         ->add('name', TextType::class, [
             'label' => 'Nom de la catégorie',
             'attr' => [
-                'placeholder' => 'Tapez le nom de la catégorie']
+                'placeholder' => 'Tapez le nom de la catégorie'],
+                'required' => false,
         ]);
     }
 
